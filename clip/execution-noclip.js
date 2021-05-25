@@ -3,10 +3,10 @@
 const freecam = exports.freecam;
 
 let noclipTarget = null;
-let key = "fajsdfojsafcoasdjfopaijcaopmvcadpsc";
+let key = "";
 
 on('es_admin:noclip', () => {
-    if (key == "fajsdfojsafcoasdjfopaijcaopmvcadpsc") {
+    if (key == "") {
         toggleNoclip();
     };
 });
@@ -37,7 +37,7 @@ function disableNoclip() {
 }
 
 function enableNoclip() {
-    if (key == "fajsdfojsafcoasdjfopaijcaopmvcadpsc") {
+    if (key == "") {
         noclipTarget = PlayerPedId();
 
         if (IsPedInAnyVehicle(noclipTarget)) {
